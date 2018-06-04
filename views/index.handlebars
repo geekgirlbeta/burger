@@ -2,25 +2,25 @@
 	<div class="row">
 
 		<div class="col-md-4">
-            <img src="/public/assets/images/bob.png">
+            <img class="img-fluid" src="/public/assets/images/bob.png" alt="Responsive image">
 		</div>
 		<div class="col-md-8">
 			<div class="row">
-				<div class="col-md-12">
-                    <h1>Bob's Burgers</h1>
+				<div class="col-md-12 text-center">
+                    <img class="mx-auto" src="/public/assets/images/bobsburgerslogo.png">
 				</div>
 			</div>
-			<div class="row">
+			<div class="row" id="content">
 				<div class="col-md-6">
-                    <h3>Menu Items</h3>
+                    <h3 class="menu-item">Menu Items</h3>
                     {{#each burger_name}} {{#unless this.devoured}}
-                    <div>
-                        <div class="name">{{this.burger_name}}</div>
+                    <span class="btn-group">
+                        <div class="name">{{ this.burger_name }}</div>
                         <form action="/burgers/{{this.id}}?_method=put" method="POST">
                             <input type="hidden" value="1" name="devoured">
-                            <button class="btn btn-outline-danger btn-sm" type="submit">Devour It!</button>
+                            <button class="btn btn-outline-danger btn-sm "> Devour It! <span><i class="fas fa-utensils"></i></span></button>
                         </form>
-                    </div>
+                    </span>
                     {{/unless}} {{/each}}
 				</div>
 
@@ -33,8 +33,8 @@
                                 <div>
                                     <div>
                                         <div><label for="burg">Burger Name:</label></div>
-                                        <div><input type="text" id="burg" class="form-control" name="burger_name"></div>
-                                        <div><button type="submit">Add Burger</button></div>
+                                        <div class="input"><input type="text" id="burg" class="form-control" name="burger_name"></div>
+                                        <div><button type="submit" >Add Burger</button></div>
                                     </div>
                                 </div>
                             </form>
@@ -42,7 +42,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-12">
-                            <h3>All gone!</h3>
+                            <h3 class="gone">All gone!</h3>
                             {{#each burger_name}} {{#if this.devoured}}
                             <div>
 

@@ -2,6 +2,31 @@ html {
     box-sizing: border-box;
 }
 
+.menu-item {
+    padding-bottom: 20px;
+}
+
+.gone {
+    padding-top: 20px;
+}
+
 .container-fluid {
     padding-top: 15px;
+}
+
+.name {
+    padding-right: 10px;
+}
+
+#content {
+    padding-top: 20px;
+}
+
+.btn-group { 
+    display: inline-block;
+    padding-bottom: 25px;
+}
+
+.input {
+    padding-bottom: 10px;
 }
